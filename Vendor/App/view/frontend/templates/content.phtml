@@ -1,0 +1,43 @@
+<h1>This is my template, there are many like it, but this one is mine.</h1>
+<?php
+
+echo $this->show_block();
+
+?>
+<form class="form contact-inchoo" action="<?php /* @escapeNotVerified */ echo $block->getFormAction(); ?>" id="contact-form" method="post" data-hasrequired="* Required Fields">
+    <fieldset class="fieldset">
+        <div class="field name required">
+            <label class="label" for="field1"><span>Field 1 (using data-validate)</span></label>
+            <div class="control">
+                        <input name="field1" id="field1" title="Field 1" value="" class="input-text" type="text" />
+            </div>
+        </div>
+            <div class="field name required">
+            <label class="label" for="field2"><span>Field 2 (using attribute)</span></label>
+            <div class="control">
+                        <input name="field2" id="field2" title="Field 2" value="" class="input-text" type="text" />
+            </div>
+        </div>
+            <div class="field name required">
+                    <label class="label" for="field3"><span>Field 3 (using classname)</span></label>
+                    <div class="control">
+                        <input name="field3" id="field3" title="Field 2" value="" type="text" class="input-text" />
+                    </div>
+            </div>
+            <div class="field name required">
+                    <label class="label" for="field4"><span>Field 4 (using data-mage-init)</span></label>
+                    <div class="control">
+                        <input name="field4" id="field4" title="Field 4" value="" class="input-text" type="text" />
+                    </div>
+            </div>
+            <?php echo $block->getChildHtml('form.additional.info'); ?>
+    </fieldset>
+    <div class="actions-toolbar">
+            <div class="primary">
+                    <input type="hidden" name="hideit" id="hideit" value="" />
+                    <button type="submit" title="Submit" class="action submit primary">
+                        <span>Submit</span>
+                    </button>
+            </div>
+        </div>
+</form>
